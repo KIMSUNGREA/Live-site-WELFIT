@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'Pd';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+    /* 효소설문지 */
+    .check_list_wrap { margin: 0 auto; width: 800px; padding: 0 20px;}
+    .radio_box { margin-bottom: 10px; display: flex; align-items: center; position: relative; padding-left: 25px; margin-right: 10px; cursor: pointer; font-size: 14px; -webkit-user-select: none;}
+
+    /* 라디오 버튼 번경 */
+    [type="radio"] {
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        box-shadow: 0 0 0 4px #2e3391;
+        border: 4px solid #fff;
+        border-radius: 50%;
+    }
+
+    [type="radio"]:checked {
+        box-shadow: 0 0 0 4px #2e3391;
+        border: 6px solid #fff;
+        background-color: #2e3391;
+    }
+
+    /* 섹션 */
+    section { margin-bottom: 30px;}
+
+    /* 타이틀&질문*/
+    .check_list_tit { text-align: center; margin-top: 60px;}
+    .check_list_tit p { margin-bottom: 48px; display: inline-block; width: 364px; line-height: 66px; background: #2e3391; color: #fff; font-size: 36px; font-family: 'Pd';}
+    .check_list_tit h1 { line-height: .8; color: #2e3391; font-size: 60px; font-family: 'Pd'; font-weight: 900;}
+    .check_list_tit strong { display: inline-block; margin-right: 10px; font-size: 122px; font-weight: 900; vertical-align: middle; font-family: 'Pd';}
+
+    .sub_tit { text-align: center; font-family: 'Pd';}
+    .sub_tit h2 { margin-top: 96px; display: inline-block; width: 285px; line-height: 76px; border: 3px solid #2e3391; color: #2e3391; font-size: 36px; font-family: 'Pd';}
+    .sub_tit img { display: block; margin: 70px auto 46px; width: 250px;}
+
+    .sub_h1 { margin-bottom: 10px; font-size: 40px; line-height: 1.6; color: #2e3391; font-family: 'Pd';}
+    .sub_h1 strong { color: #000; font-family: 'Pd'; font-weight: 900;}
+
+    .ck_list { margin-bottom: 50px;}
+    .ck_list p { margin-left: 15px; font-size: 40px; color: #2e3391; font-family: 'Pd';}
+
+    /* 그 외 */
+    .complete { margin: 0 auto 50px; display: block; width: 400px; line-height: 94px; color: #fff; background: #2e3391; border-radius: 10px; font-size: 36px; text-align: center; font-family: 'Pd';}
+    .goods dl { margin-top: 156px; display: flex; justify-content: center; gap: 30px;}
+    .goods dl dd { margin-top: -12px;}
+    .goods dl dd strong { color: #2e3391; font-size: 122px; font-family: 'Pd';}
+    .goods dl dd h1 { margin-top: -54px; margin-bottom: 38px; color: #2e3391; font-size: 36px; font-weight: 100; font-family: 'Pd';}
+    .goods dl dd h1 span { font-weight: 900; font-family: 'Pd';}
+    .goods dl dd h2 { font-size: 52px; font-weight: 100; font-family: 'Pd'; color: #000;}
+    .goods dl dd h2 span { font-weight: 900; font-family: 'Pd';}
+    .goods dl dd a { margin: 0 auto; display: block; width: 267px; line-height: 86px; text-align: center; border: 3px solid #000; border-radius: 43px; font-size: 36px; color: #000; font-family: 'Pd'; font-weight: 900; margin-top: 18px;}
+
+    /* 팝업 */
+    .layer_dimm { background:#000; display:none; height:100%; left:0; opacity:.7; position:fixed; top:0; width:100%; z-index:99;}
+
+    .popup { display: none; padding: 0 14px; position: fixed; width: 800px; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 100; background: #fff;}
+    .popup .tit { margin-bottom: 48px; display: flex; align-items: end; gap: 20px;}
+    .popup .tit strong { font-size: 122px; color: #ee0f00; font-family: 'Pd';}
+    .popup .tit h1 { font-size: 50px; color: #000; font-family: 'Pd';}
+    .popup .tit h1 span { font-weight: 600; font-family: 'Pd';}
+
+    .popup .str_list { display: flex; flex-direction: column; row-gap: 30px; height: 306px; overflow-y: scroll;}
+
+    .popup .str_list li a { display: block; height: 512px; background: url(../images/popup_bg.png) no-repeat center/cover; border-radius: 10px; background-position-x: -2px;}
+    .popup .str_list li a p { padding-left: 14px; padding-top: 50px; font-size: 26px; font-weight: 600; color: #fff; font-family: 'Pd';}
+
+    .popup .str_list li a .cont { display: flex; justify-content: center; align-items: end; gap: 30px;}
+    .popup .str_list li a .cont img { padding-left: 48px;}
+    .popup .str_list li a .cont .text h2 { margin-bottom: 36px; font-size: 38px; color: #000; font-family: 'Pd';}
+    .popup .str_list li a .cont .text h2 em { font-style: normal; font-weight: 600;}
+    .popup .str_list li a .cont .text span { font-size: 24px; color: #ee0f00; font-weight: 500; font-family: 'Pd';}
+
+    .popup small { margin-top: 10px; display: block; color: #888; font-family: 'Pd';}
+    .popup > button { margin: 42px auto; display: block; width: 300px; height: 70px; color: #fff; background: #666; font-size: 26px; border-radius: 10px; font-weight: 500; cursor: pointer; font-family: 'Pd';}
+    .close_btn { position: absolute; right: 46px; top: 32px;}
+
+    .atag { display: block;
+    width: 240px;
+    line-height: 70px;
+    text-align: center;
+    background: #ee0f00;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+    border-radius: 50px;
+    margin-top: 26px;
+    cursor: pointer; font-family: 'Pd';}

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>효소찾기</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css?<?=time();?>">
+    <link rel="stylesheet" href="css/m_style.css?<?=time();?>">
+
+</head>
+<body>
+    <div class="layer_dimm"></div>
+    <div class="popup">
+        <a href="javascript:location.href='/find-enzyme/';" class="close_btn"><img src="images/close_btn.png" alt=""></a>
+        <div class="tit">
+            <strong>*</strong>
+            <h1>설문 결과로 선정한<br><span>멜팅온 추천 효소 두 가지!</span></h1>
+        </div>
+        <ul class="str_list" id="pop-cont">
+            <!-- <li>
+                <a href="https://melting-on.com/product/%EC%97%94%EC%9E%90%EC%9E%844-%ED%83%84%EB%8B%A8%EC%A7%80%EB%8B%A4-%EC%96%BC%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%A7%9B/12/category/24/display/1/" target="_blank">
+                    <p>추천 1순위</p>
+                    <div class="cont">
+                        <img src="images/popup_img4.png" alt="">
+                        <div class="text">
+                            <h2>엔자임 4 탄단지다<br><em>얼그레이맛</em></h2>
+                            <span>지방 분해효소 활성화 특화효소 EMIQ 50g</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://melting-on.com/product/%EC%97%94%EC%9E%90%EC%9E%844-%ED%83%84%EB%8B%A8%EC%A7%80%EB%8B%A4-%EB%8B%A4%ED%81%AC%EC%B4%88%EC%BD%94%EB%A7%9B/11/category/1/display/2/" target="_blank">
+                    <p>추천 2순위</p>
+                    <div class="cont">
+                        <img src="images/popup_img1.png" alt="">
+                        <div class="text">
+                            <h2>엔자임 4 탄단지다<br><em>다크초코맛</em></h2>
+<span>α-아밀라이제 150만Unit<br class="pc"> 탄수화물 맞춤 분해효소</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://melting-on.com/product/%EC%97%94%EC%9E%90%EC%9E%844-%ED%83%84%EB%8B%A8%EC%A7%80%EB%8B%A4-%ED%8A%B8%EB%A1%9C%ED%94%BC%EC%BB%AC%EB%A7%9B/14/category/24/display/1/" target="_blank">
+                    <p>추천 3순위</p>
+                    <div class="cont">
+                        <img src="images/popup_img3.png" alt="">
+                        <div class="text">
+                            <h2>엔자임 4 탄단지다<br><em>트로피컬</em></h2>
+<span>단백질 맞춤분해 효소<br class='pc'>프로테아제 7,000Unit</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://melting-on.com/product/%EC%97%94%EC%9E%90%EC%9E%844-%ED%83%84%EB%8B%A8%EC%A7%80%EB%8B%A4-%EC%8A%A4%EC%9C%97%ED%8F%AC%ED%85%8C%EC%9D%B4%ED%86%A0%EB%A7%9B/15/category/24/display/1/" target="_blank">
+                    <p>추천 4순위</p>
+                    <div class="cont">
+                        <img src="images/popup_img2.png" alt="">
+                        <div class="text">
+                            <h2>엔자임 4 탄단지다<br><em>스윗포테이토</em></h2>
+                            <span>밸런스 효소,<br class="pc"> 
+				α-아밀라이제 50만Unit<br class="pc">
+				프로테아제 1,500Unit<br class="pc">
+				EMIQ 10g
+			     </span>
+                        </div>
+                    </div>
+                </a>
+            </li> -->
+        </ul>
+        <small>*본 설문 결과는 제품 선택 참조자료이며 의학적 근거가 없습니다.</small>
+        <button onclick="location.href='/find-enzyme/';">다시해보기</button>
+    </div>
+
+    <div class="check_list_wrap">
+        <div class="check_list_tit">
+            <p>멜팅온 맞춤 효소 찾기</p>
+            <h1>
+                <strong>*</strong>효소, 고민되세요?<br>
+                내 식습관에 맞는 효소 찾기
+            </h1>
+        </div>
+        <div class="sub_tit">
+            <h2>식사습관</h2>
+            <img src="images/img1.png" alt="">
+        </div>
+		<form name="dataform">
+        <section class="sec1">
+            <h1 class="sub_h1">Q1. <strong>하루에 식사를 몇 회나</strong> 하십니까?</h1>
+            <div class="ck_list">
+				<label for="item1" class="radio_box">
+                    <input type="radio" id="item1" name="item1" value="1" />
+                    <span class="on"></span>
+                    <p>3회</p>
+				</label>
+                <label for="item2" class="radio_box">
+                    <input type="radio" id="item2" name="item1" value="2" />
+                    <span class="on"></span>
+                    <p>2회</p>
+                </label>
+                <label for="item3" class="radio_box">
+                    <input type="radio" id="item3" name="item1" value="3" />
+                    <span class="on"></span>
+                    <p>1회</p>
+                </label>
+                <label for="item4" class="radio_box">
+                    <input type="radio" id="item4" name="item1" value="4" />
+                    <span class="on"></span>
+                    <p>불규칙하다.</p>
+                </label>
+            </div>
+        </section>
+        <section class="sec2">
+            <h1 class="sub_h1">Q2. <strong>아침 식사를</strong>제대로 하십니까?</h1>
+            <div class="ck_list">
+                <label for="item5" class="radio_box">
+                    <input type="radio" id="item5" name="item2" value="1">
+                    <span class="on"></span>
+                    <p>꼬박꼬박 먹는다.</p>
+                </label>
+                <label for="item6" class="radio_box">
+                    <input type="radio" id="item6" name="item2" value="2" />
+                    <span class="on"></span>
+                    <p>가끔 거른다.</p>
+                </label>
+                <label for="item7" class="radio_box">
+                    <input type="radio" id="item7" name="item2" value="3" />
+                    <span class="on"></span>
+                    <p>먹지 않는다.</p>
+                </label>
+            </div>
+        </section>
+        <section class="sec3">
+            <h1 class="sub_h1">Q3. <strong>늘 일정한 시간에 식사를</strong> 하십니까?</h1>
+            <div class="ck_list">
+                <label for="item8" class="radio_box">
+                    <input type="radio" id="item8" name="item3" value="1">
+                    <span class="on"></span>
+                    <p>매우 그렇다.</p>
+                </label>
+                <label for="item9" class="radio_box">
+                    <input type="radio" id="item9" name="item3" value="2" />
+                    <span class="on"></span>
+                    <p>가끔 불규칙하다.</p>
+                </label>
+                <label for="item10" class="radio_box">
+                    <input type="radio" id="item10" name="item3" value="3" />
+                    <span class="on"></span>
+                    <p>매우 불규칙하다.</p>
+                </label>
+            </div>
+        </section>
+        <section class="sec4">
+            <h1 class="sub_h1">Q4. <strong>과식을</strong> 하는 경우가 있습니까?</h1>
+            <div class="ck_list">
+                <label for="item11" class="radio_box">
+                    <input type="radio" id="item11" name="item4" value="1">
+                    <span class="on"></span>
+                    <p>자주 있다(주 4회 이상)</p>
+                </label>
+                <label for="item12" class="radio_box">
+                    <input type="radio" id="item12" name="item4" value="2" />
+                    <span class="on"></span>
+                    <p>가끔 있다(주 2-3회)</p>
+                </label>
+                <label for="item13" class="radio_box">
+                    <input type="radio" id="item13" name="item4" value="3" />
+                    <span class="on"></span>
+                    <p>거의 없다(주 0-1회)</p>
+                </label>
+            </div>
+        </section>
+        <div class="sub_tit">
+            <h2>음식 선호도</h2>
+            <img src="images/img2.png" alt="">
+        </div>
+        <section class="sec5">
+            <h1 class="sub_h1">Q5. <strong>곡류음식(밥, 라면, 칼국수, 떡볶이, 빵 등)</strong>을 하루에 몇 회 드십니까?</h1>
+            <div class="ck_list">
+                <label for="item14" class="radio_box">
+                    <input type="radio" id="item14" name="item5" value="10" />
+                    <span class="on"></span>
+                    <p>3회</p>
+                </label>
+                <label for="item15" class="radio_box">
+                    <input type="radio" id="item15" name="item5" value="5" />
+                    <span class="on"></span>
+                    <p>2회</p>
+                </label>
+                <label for="item16" class="radio_box">
+                    <input type="radio" id="item16" name="item5" value="3" />
+                    <span class="on"></span>
+                    <p>1회 이하</p>
+                </label>
+            </div>
+        </section>
+        <section class="sec6">
+            <h1 class="sub_h1">Q6. <strong>생선, 계란, 콩, 두부 등으로</strong> 만든 반찬을 하루에 몇 회 드십니까?</h1>
+            <div class="ck_list">
+                <label for="item17" class="radio_box">
+                    <input type="radio" id="item17" name="item6" value="1" />
+                    <span class="on"></span>
+                    <p>3회</p>
+                </label>
+                <label for="item18" class="radio_box">
+                    <input type="radio" id="item18" name="item6" value="2" />
+                    <span class="on"></span>
+                    <p>2회</p>
+                </label>
+                <label for="item19" class="radio_box">
+                    <input type="radio" id="item19" name="item6" value="3" />
+                    <span class="on"></span>
+                    <p>1회 이하</p>
+                </label>
+            </div>
+        </section>
+        <section class="sec7">
+            <h1 class="sub_h1">Q7. <strong>채소류, 해조류, 버섯 등으로</strong> 만든 반찬을 하루에 몇 회 드십니까?</h1>
+            <div class="ck_list">
+                <label for="item20" class="radio_box">
+                    <input type="radio" id="item20" name="item7" value="1" />
+                    <span class="on"></span>
+                    <p>3회</p>
+                </label>
+                <label for="item21" class="radio_box">
+                    <input type="radio" id="item21" name="item7" value="2" />
+                    <span class="on"></span>
+                    <p>2회</p>
+                </label>
+                <label for="item22" class="radio_box">
+                    <input type="radio" id="item22" name="item7" value="3" />
+                    <span class="on"></span>
+                    <p>1회 이하</p>
+                </label>
+            </div>
+        </section>
+        <section class="sec8">
+            <h1 class="sub_h1">Q8. <strong>육류(소고기, 돼지고기, 닭고기 등)</strong>를 일주일에 몇 회 드십니까?</h1>
+            <div class="ck_list">
+                <label for="item23" class="radio_box">
+                    <input type="radio" id="item23" name="item8" value="10" />
+                    <span class="on"></span>
+                    <p>자주 먹는다(주3~4회)</p>
+                </label>
+                <label for="item24" class="radio_box">
+                    <input type="radio" id="item24" name="item8" value="10" />
+                    <span class="on"></span>
+                    <p>가끔 먹는다(주1~2회)</p>
+                </label>
+                <label for="item25" class="radio_box">
+                    <input type="radio" id="item25" name="item8" value="5" />
+                    <span class="on"></span>
+                    <p>거의 안먹는다(월 1회 이하)</p>
+                </label>
+            </div>
+        </section>
+        <section class="sec9">
+            <h1 class="sub_h1">Q9. <strong>치킨, 곱창, 족발, 튀김(감자튀김), 피자, 패스트푸드</strong> 등을 일주일에 몇 회 드십니까?</h1>
+            <div class="ck_list">
+                <label for="item26" class="radio_box">
+                    <input type="radio" id="item26" name="item9" value="10" />
+                    <span class="on"></span>
+                    <p>자주 먹는다(주3~4회)</p>
+                </label>
+                <label for="item27" class="radio_box">
+                    <input type="radio" id="item27" name="item9" value="10" />
+                    <span class="on"></span>
+                    <p>가끔 먹는다(주1~2회)</p>
+                </label>
+                <label for="item28" class="radio_box">
+                    <input type="radio" id="item28" name="item9" value="5" />
+                    <span class="on"></span>
+                    <p>거의 안먹는다(월 1회 이하)</p>
+                </label>
+            </div>
+        </section>
+        <div class="sub_tit">
+            <h2>생활습관</h2>
+            <img src="images/img3.png" alt="">
+        </div>
+        <section class="sec10">
+            <h1 class="sub_h1">Q10. <strong>야식이나 간식을</strong> 자주 드십니까?</h1>
+            <div class="ck_list">
+                <label for="item29" class="radio_box">
+                    <input type="radio" id="item29" name="item10" value="1" />
+                    <span class="on"></span>
+                    <p>자주 먹는다(주3~4회)</p>
+                </label>
+                <label for="item30" class="radio_box">
+                    <input type="radio" id="item30" name="item10" value="2" />
+                    <span class="on"></span>
+                    <p>가끔 먹는다(주1~2회)</p>
+                </label>
+                <label for="item31" class="radio_box">
+                    <input type="radio" id="item31" name="item10" value="3" />
+                    <span class="on"></span>
+                    <p>거의 안먹는다(월 1회 이하)</p>
+                </label>
+            </div>
+        </section>
+        <section class="sec11">
+            <h1 class="sub_h1">Q11. <strong>술을</strong> 자주 드십니까?</h1>
+            <div class="ck_list">
+                <label for="item32" class="radio_box">
+                    <input type="radio" id="item32" name="item11" value="1" />
+                    <span class="on"></span>
+                    <p>자주 먹는다(주3회 이상)</p>
+                </label>
+                <label for="item33" class="radio_box">
+                    <input type="radio" id="item33" name="item11" value="2" />
+                    <span class="on"></span>
+                    <p>가끔 먹는다(주1~2회)</p>
+                </label>
+                <label for="item34" class="radio_box">
+                    <input type="radio" id="item34" name="item11" value="3" />
+                    <span class="on"></span>
+                    <p>거의 안먹는다(월 1회 이하)</p>
+                </label>
+                <!-- <label for="item35" class="radio_box">
+                    <input type="radio" id="item35" name="item11" value="4" />
+                    <span class="on"></span>
+                    <p>먹지 않는다(월 1회 이하)</p>
+                </label> -->
+            </div>
+        </section>
+        <section class="sec12">
+            <h1 class="sub_h1">Q12. <strong>일주일에 운동을</strong> 얼마나 하십니까?</h1>
+            <div class="ck_list">
+                <label for="item36" class="radio_box">
+                    <input type="radio" id="item36" name="item12" value="1" />
+                    <span class="on"></span>
+                    <p>주 3회 이상</p>
+                </label>
+                <label for="item37" class="radio_box">
+                    <input type="radio" id="item37" name="item12" value="2" />
+                    <span class="on"></span>
+                    <p>주 2회 이하</p>
+                </label>
+                <label for="item38" class="radio_box">
+                    <input type="radio" id="item38" name="item12" value="3" />
+                    <span class="on"></span>
+                    <p>거의 하지 않는다.</p>
+                </label>
+            </div>
+        </section>
+		</form>
+
+        <a href="javascript:suvey_result()" class="complete">설문완료 결과보기</a>
+
+    </div>
+
+
+<script src="js/jquery-3.6.4.min.js"></script>
+<script>
+function suvey_result() {
+
+	var f = document.dataform;
+	var itemval = "";
+
+	//제품 점수
+	var Q5 = 0; //다크초코 Q5
+	var Q8 = 0; //트로피컬 Q8
+	var Q9 = 0; //얼그레이 Q9
+
+	for (var i=1; i<13; i++) {
+
+		itemval = $("input[name='item"+i+"']:checked").val();
+
+		if (!itemval) {
+			$("input[name='item"+i+"']").focus();
+			alert("Q"+i+" 항목을 선택해 주세요.");
+			return;
+		}
+
+		if (i == 5) {Q5 = itemval;}
+		if (i == 8) {Q8 = itemval;}
+		if (i == 9) {Q9 = itemval;}
+	}
+
+	$.post("/find-enzyme/get.list.ajax.php", {
+		'mode': 'get_list',
+		'Q5' : Q5,
+		'Q8' : Q8,
+		'Q9' : Q9
+	},function(data){
+		eval(data);
+
+		if (ret=="00") {
+
+			//내용 삽입
+			$('#pop-cont').html(cont);
+
+			// 스크롤 방지를 위해 추가로 처리
+			$('html, body').css({
+				overflow: 'hidden',
+				height: '100%'
+			});
+
+			// 여기에 추가 작업을 수행하면 됩니다.
+			$(".layer_dimm, .popup").fadeIn();
+
+		} else if (ret=="99") {
+			alert("통신에 문제가 생겼습니다. 잠시뒤에 이용해 주세요.");
+			location.href="/find-enzyme/";
+		}
+	});
+}
+
+$(document).ready(function() {
+	// 각 섹션 내에서 라디오 버튼이 독립적으로 동작하도록 설정
+	for (let i = 1; i <= 12; i++) {
+		$(".sec" + i + " input[type='radio']").change(function() {
+			$(".sec" + i + " input[type='radio']").not(this).prop("checked", false);
+		});
+	}
+});
+$(".close_btn").click(function(){
+    $(".layer_dimm, .popup").fadeOut();
+})
+</script>
+</body>
+</html>
